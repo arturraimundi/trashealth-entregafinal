@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from core.views import index, CadastrodePontos, vitrine, mapa, sac, login, perfil, register, nos, erro, erroCADASTRODEPONTO
+from core.views import index, CadastrodePontos, vitrine, mapa, sac, login, perfil, register, nos, erro, erroCADASTRODEPONTO, sair
+from django.contrib.auth.views import LogoutView
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('admin/', admin.site.urls),
@@ -36,6 +39,7 @@ urlpatterns = [
     path('nos', nos, name='nos'),
     path('cadastrodepontoerro', erroCADASTRODEPONTO),
     path('excluir_ponto/<int:ponto_id>/', views.excluir_ponto, name='excluir_ponto'),
+    path('logout/', views.sair, name='logout'),
 ]
 
 if settings.DEBUG:

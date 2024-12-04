@@ -9,7 +9,7 @@ from django.http import HttpResponse
 import json
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-
+from django.contrib.auth import logout
 
 def index(request):
         return render(request, 'index.html')
@@ -172,7 +172,7 @@ def perfil(request):
 
 
 
+
 def sair(request):
     logout(request)  # Remove o usuário da sessão
-    return redirect('index')  # Redireciona para a página de login
-#programar dps essa birosca
+    return redirect('vitrine')  # Redireciona para a página inicial

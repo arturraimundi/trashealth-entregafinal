@@ -11,14 +11,15 @@
     </style>
   </head>
   <header class="header1">
-    <a href="index" class="infos"
-      ><img src="../static/img/logo3.png" alt="" class="logo"
-    /></a>
+    <a href="index" class="infos"><img src="../static/img/logo3.png" alt="" class="logo" /></a>
     <a href="nos" class="infos">QUEM SOMOS NOS?</a>
     <a href="mapa" class="infos">MAPA</a>
     <a href="vitrine" class="infos">VITRINE</a>
     <a href="sac" class="infos">SAC</a>
-    <a href="index" class="botao">Sair da Conta</a>
+    <form action="{% url 'logout' %}" method="POST" style="display: inline;">
+      {% csrf_token %}
+      <button type="submit" class="botao">Sair da Conta</button>
+    </form>
   </header>
 
   <body>
