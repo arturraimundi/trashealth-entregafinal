@@ -1,0 +1,39 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/pontos.css">
+    <title>TrasHealth</title>
+    {% bootstrap_css %}
+    <link rel="icon" href="../static/img/logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap');
+    </style>
+</head>
+<header class="header1">
+    <a href="index" class="infos"><img src="../static/img/logo3.png" alt="" class="logo"></a>
+    <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+    <a href="mapa" class="infos">MAPA</a>
+    <a href="vitrine" class="infos">VITRINE</a>
+    <a href="sac" class="infos">SAC</a>
+    <a href="perfil" class="botao">Perfil</a>
+</header>
+<body>
+    <div class="container">
+        <h1>Cadastro de pontos de coleta</h1>  
+        {% bootstrap_messages %}
+
+        <form action="{% url 'CadastrodePontos' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            {% endbuttons %}
+        </form>
+
+    </div>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

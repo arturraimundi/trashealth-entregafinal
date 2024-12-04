@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitrine de Pontos de Coleta</title>
+    <link rel="stylesheet" href="../static/css/vitrine.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
+    </style>
+  </head>
+  <header class="header1">
+    <a href="index" class="infos"
+      ><img src="../static/img/logo3.png" alt="" class="logo"
+    /></a>
+    <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+    <a href="mapa" class="infos">MAPA</a>
+    <a href="vitrine" class="infos">VITRINE</a>
+    <a href="sac" class="infos">SAC</a>
+    <a href="login" class="botao">ENTRAR</a>
+    <a href="register" class="botao">Criar conta</a>
+  </header>
+
+  <body>
+    <div class="container">
+      <div class="textoo">
+        <h1 class="textoo-dentro">Vitrine de Pontos de Coleta</h1>
+      </div>
+      <div id="carouselPontos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {% for i in vitrine %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img
+              src="{{ i.imagem.url }}"
+              class="d-block w-100"
+              alt="Imagem de {{ i.titulo }}"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ i.titulo }}</h5>
+              <p><strong>Local:</strong> {{ i.local }}</p>
+              <p><strong>Descrição:</strong> {{ i.descricao }}</p>
+              <td class="sla_oq" scope="row">{{i.imagem}}</td>
+            </div>
+          </div>
+          {% empty %}
+          <p>Nenhum ponto de coleta disponível.</p>
+          {% endfor %}
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselPontos"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselPontos"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

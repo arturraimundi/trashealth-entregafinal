@@ -1,0 +1,85 @@
+* {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    color: #323272;
+}
+
+.logo {
+    width: 50px;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #323272;
+    font-size: max(10px, 1vw)
+}
+
+.infos {
+    text-decoration: none;
+    color: white;
+    transition: 200ms;
+}
+
+.infos:hover {
+    color: #f7a074;
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.botao {
+    text-decoration: none;
+    color: white;
+    border: solid 5px #f7a074;
+    border-radius: 20px;
+    padding: 3px 20px;
+    background-color: #f7a074;
+    transition: 200ms;
+}
+
+.botao:hover {
+    color: #323272;
+    transform: scale(1.1);
+    transition: 200ms;
+
+}
+
+body {
+    background-image: url(../img/fundomapa.jpg);
+
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 100vw;
+    object-fit: cover;
+    scale: 80%;
+}
+.carousel-caption {
+    padding: 0 7vw;
+    font-size: xx-large;
+}
+.textoo{
+    text-align: center;
+    padding-top: 2vw;
+}
+.carousel-control-prev{
+   display: none;
+}
+.visually-hidden{
+    display: none;
+}
+.carousel-control-next{
+    display: none;
+}
+.textoo-dentro{
+    color: #323272;
+}

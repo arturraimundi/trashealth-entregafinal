@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/perfil.css" />
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <title>TrasHealth</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
+    </style>
+  </head>
+  <header class="header1">
+    <a href="index" class="infos"
+      ><img src="../static/img/logo3.png" alt="" class="logo"
+    /></a>
+    <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+    <a href="mapa" class="infos">MAPA</a>
+    <a href="vitrine" class="infos">VITRINE</a>
+    <a href="sac" class="infos">SAC</a>
+    <a href="index" class="botao">Sair da Conta</a>
+  </header>
+
+  <body>
+    <sec class="section1">
+      <div class="infosperf">
+        <div class="txt">
+          <h1 class="titulo">CNPJ: {{ username }}</h1>
+          <h1 class="titulo">Seja bem-vindo, {{ first_name }}</h1>
+          <div class="lista-pontos">
+            <h2 class="subtitulo">Pontos cadastrados:</h2>
+            <ul>
+              {% for ponto in pontos %}
+                <li>
+                  {{ ponto }}
+                  <form method="POST" action="{% url 'excluir_ponto' ponto.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" id='ponto_id'>Excluir</button>
+                  </form>
+                  <form method="POST" action="{% url 'excluir_ponto' ponto.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit"><a href="CadastrodePontos">Editar Ponto</a></button>
+                </form>
+                </li>
+              {% empty %}
+                <li>Nenhum ponto cadastrado com este CNPJ.</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <a href="CadastrodePontos" class="cadastro">Cadastrar novos pontos de coleta de material reciclavel</a>
+        </div>
+      </div>  
+    </sec>
+
+  </body>
+  
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap');
+
+* {
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+    color: white;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../img/fundologin.jpg') center center/cover no-repeat;
+}
+#ground{
+    background-color: #e2b4dbb8;
+    text-align: center;
+    font-size: 50px;
+}
+#ground img{
+    display: flex;
+    margin: auto;
+}
+#email{
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 4px;
+}
+#senha{
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 4px;
+}
+#nome{
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 4px;
+}
+label{
+    color: white;
+}
+.cadastro-form {
+    width: 300px;
+    padding: 20px;
+    border: 3px solid #e4ece446;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #010f0277;
+}
+
+.cadastro-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cadastro-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.cadastro-form input[type="text"],
+.cadastro-form input[type="email"],
+.cadastro-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.cadastro-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #323272;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cadastro-form input[type="submit"]:hover {
+    color:  #000000;
+    transform: scale(1.01); 
+    transition: 200ms;
+}
+a{
+    margin-top: 150px;
+    scale: 100%;
+    text-align: center;
+    color: #323272;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    transition: 400ms;
+    
+}
+.slaoq{
+    padding: 1vw 0 0 0 ;
+    text-align: center;
+}
+.slaoq2{
+    text-align: center;
+    padding-bottom: 10px;
+}

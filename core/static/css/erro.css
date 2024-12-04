@@ -1,0 +1,120 @@
+* {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.logo {
+    width: 50px;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #323272;
+    font-size: max(10px, 1vw)
+}
+
+.infos {
+    text-decoration: none;
+    color: white;
+    transition: 200ms;
+}
+
+.infos:hover {
+    color: #f7a074;
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.botao {
+    text-decoration: none;
+    color: white;
+    border: solid 5px #f7a074;
+    border-radius: 20px;
+    padding: 3px 20px;
+    background-color: #f7a074;
+    transition: 200ms;
+}
+
+.botao:hover {
+    color: #323272;
+    transform: scale(1.1);
+    transition: 200ms;
+
+}
+
+body {
+    background-color: #323272;
+
+}
+
+.section1 {
+    width: 99.1;
+    height: 55vw;
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 1px 103px 228px -7px rgba(21,1,31,0.74);
+    -webkit-box-shadow: 1px 103px 228px -7px rgba(21,1,31,0.74);
+    -moz-box-shadow: 1px 103px 228px -7px rgba(21,1,31,0.74);
+
+}
+
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 25.6vw;
+    padding-bottom: 11vw;
+
+}
+
+.hidden-image {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    width: 100%;
+    transform: scale(0.9);
+    height: auto;
+}
+
+.image-container:hover .hidden-image {
+    opacity: 1;
+    transition: 500ms;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6vw;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323272d8;
+    padding: 200px 50px;
+    border-radius: 10px;
+   
+}
+
+.text h1{
+    font-size: 50px;
+}
+.text a{
+    padding: 20px 50px;
+    border-radius: 5px;
+    background-color: rgb(238, 168, 88);
+    font-size: 20px;
+    margin-top: 50px;
+    text-decoration: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrasHealth</title>
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="../static/css/mapa.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap');
+  </style>
+</head>
+<header class="header1">
+  <a href="index" class="infos"><img src="../static/img/logo3.png" alt="" class="logo"></a>
+  <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+  <a href="mapa" class="infos">MAPA</a>
+  <a href="vitrine" class="infos">VITRINE</a>
+  <a href="sac" class="infos">SAC</a>
+  <a href="login" class="botao">ENTRAR</a>
+  <a href="register" class="botao">Criar conta</a>
+</header>
+
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Cria um mapa Leaflet em um contêiner com o ID 'map'
+      var map = L.map('map').setView([-26.877, -52.4186], 15);
+  
+      // Adiciona a camada de azulejos do OpenStreetMap ao mapa
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      var romeMarker2 = L.marker([-26.887, -52.40]).addTo(map)
+        .bindPopup("<b>Ponto</b><br>Vista alegre").openPopup();
+      var romeMarker = L.marker([-26.867, -52.4266]).addTo(map)
+        .bindPopup("<b>Ponto</b><br>Sésamo").openPopup();
+      // Adiciona uma marcação em Roma com uma janela pop-up
+      var romeMarker1 = L.marker([-26.876682, -52.418393]).addTo(map)
+        .bindPopup("<b>Ponto</b><br>IFSC").openPopup();
+    </script>
+</body>

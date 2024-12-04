@@ -1,0 +1,203 @@
+*{
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    color: white;
+}
+.logo{
+    width: 50px;
+}
+.header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #323272;
+    font-size: max(10px, 1vw)
+}
+.infos{
+    text-decoration: none;
+    color: white;
+    transition: 200ms;
+}
+.infos:hover{
+    color: #f7a074;
+    transform: scale(1.1); 
+    transition: 200ms;
+}
+.botao{
+    text-decoration: none;
+    color: white;
+    border: solid 5px #f7a074;
+    border-radius: 20px;
+    padding: 3px 20px;
+    background-color: #f7a074;
+    transition: 200ms;
+}
+.botao:hover{
+    color: #323272;
+    transform: scale(1.1); 
+    transition: 200ms;
+
+}
+body{
+    background-image: url(/img/fundoqmsomos.jpg);
+    background-repeat: no-repeat;
+    background-color:#527cbd
+}
+.papel{
+    width: 80vw;
+    height: 45vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/papel.png)
+}
+.section1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+.carrossel {
+    position: relative;
+    width: 65%;
+    padding-top: 4vw;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.carrossel-conteudo {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+
+.prev {
+    left: 100px;
+    display: none;
+}
+
+.next {
+    right: 100px;
+    display: none;
+}
+
+.section1 {
+    background-image: url(/img/fundoqmsomos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+.fotos:hover{
+    color: #616d66be;
+    transform: scale(1.4); 
+    transition: 500ms;
+}
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 70%;
+    text-align: center;
+}
+.fotos{
+    display: flex;
+}
+.b{  width: 80%;
+    text-align: center;
+}
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 00;
+    color: white;
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    font-size: max(17px, 1.3vw);
+    font-family: Rubik, sans-serif;
+}
+
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+.titulo{
+    font-size: 3vw;
+}
+.section3 {
+    background-image: url(/img/mano.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 10vw;
+    background-color: #323272;
+    box-shadow: #323272 -0px -10px 90px 120px;
+    color: black;
+}
+
+.section4 {
+    background-image: url(/img/mano2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 10vw;
+    background-color: #36508d;
+    box-shadow:#36508d 0px 10px 90px 120px;
+    color: black;
+}

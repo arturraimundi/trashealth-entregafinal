@@ -1,0 +1,41 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuário</title>
+    {% bootstrap_css %}
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de usuário</h1>
+        {% bootstrap_messages %}
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <label>CNPJ da empresa:</label>
+            <input name="username" class="form-control" type="text" placeholder="username...">
+            <br>
+            <br>
+            <label>Email:</label>
+            <input name="email" class="form-control" type="email" placeholder="Email...">
+            <br>
+            <label>Nome da empresa:</label>
+            <input name="first_name" class="form-control" type="text" placeholder="cnpj...">
+            <br>
+            <br>
+            <label>Senha:</label>
+            <input name="password" class="form-control" type="password" placeholder="Senha...">
+            <br>
+            <br>
+            <input class="btn btn-success btn-lg" type="submit" value="Enviar">
+            <a href="{% url 'login' %}" class="btn btn-info btn-lg">Login</a>
+        </form>
+
+    </div>
+    {% bootstrap_javascript jquery='full' %}
+</body>
+
+</html>
