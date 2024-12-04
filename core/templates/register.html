@@ -1,4 +1,4 @@
-{% load bootstrap4 %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,27 +6,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de usuário</title>
-    {% bootstrap_css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/logar.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
+    </style>
+    <link rel="icon" href="../static/img/logo.png" type="image/x-icon" />
 </head>
 
 <body>
-    <div class="container">
-        <h1>Cadastro de usuário</h1>
-        {% bootstrap_messages %}
-        <form method="POST" action="{% url 'register' %}">
+    <header class="header1">
+        <a href="index" class="infos"
+          ><img src="../static/img/logo3.png" alt="" class="logo"
+        /></a>
+        <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+        <a href="mapa" class="infos">MAPA</a>
+        <a href="vitrine" class="infos">VITRINE</a>
+        <a href="sac" class="infos">SAC</a>
+        <a href="login" class="botao">ENTRAR</a>
+        <a href="register" class="botao">Criar conta</a>
+      </header>
+    <div class="form">
+       
+    
+        <form class="formm" method="POST" action="{% url 'register' %}">
+            <h1>Cadastro de usuário</h1>
             {% csrf_token %}
-            <label>CNPJ da empresa:</label>
-            <input name="username" class="form-control" type="text" placeholder="username...">
+            <div class="label">
+                <label>CNPJ da empresa:</label>
+            </div>
+            
+            <input name="username" class="form-control" type="text" placeholder="CNPJ...">
             <br>
             <br>
-            <label>Email:</label>
+            <div class="label"><label>Email:</label></div>
+        
             <input name="email" class="form-control" type="email" placeholder="Email...">
             <br>
-            <label>Nome da empresa:</label>
-            <input name="first_name" class="form-control" type="text" placeholder="cnpj...">
+            <div class="label"><label>Nome da empresa:</label></div>
+            <input name="first_name" class="form-control" type="text" placeholder="Nome da Empresa.">
             <br>
             <br>
-            <label>Senha:</label>
+            <div class="senha"><label>Senha:</label></div>
             <input name="password" class="form-control" type="password" placeholder="Senha...">
             <br>
             <br>
@@ -35,7 +55,7 @@
         </form>
 
     </div>
-    {% bootstrap_javascript jquery='full' %}
+
 </body>
 
 </html>

@@ -58,6 +58,10 @@ def  erroCADASTRODEPONTO(request):
      return render(request, ' erroCADASTRODEPONTO.html')
 
 
+from django.shortcuts import render
+from django.contrib.auth.models import User
+from validate_docbr import CNPJ  # Instale com pip install validate-docbr
+
 def register(request):
     if request.method == "GET":
         return render(request, 'register.html')
@@ -67,16 +71,22 @@ def register(request):
         email = request.POST.get('email')
         senha = request.POST.get('password')
 
+        # Validação de CNPJ
+        cnpj_validator = CNPJ()
+        if not cnpj_validator.validate(username):
+            return render(request, 'register.html', {'error': 'CNPJ inválido'})
+
+        # Verificar se o username ou email já existe
         user = User.objects.filter(username=username).first() or User.objects.filter(email=email).first()
-
         if user:
-            return render(request, 'erro.html')
+            return render(request, 'register.html', {'error': 'Usuário ou e-mail já cadastrado'})
 
-        
+        # Criar usuário
         user = User.objects.create_user(username=username, first_name=first_name, email=email, password=senha)
         user.save()
 
         return render(request, 'login.html')
+
      
 
 def login(request):
@@ -138,7 +148,7 @@ def excluir_ponto(request, ponto_id):
     ponto.delete()
     
     # Redirecionar de volta para o perfil
-    return render(request, 'perfil.html')
+    return redirect('perfil')
 
 
 @login_required
@@ -164,5 +174,5 @@ def perfil(request):
 
 def sair(request):
     logout(request)  # Remove o usuário da sessão
-    return redirect('login')  # Redireciona para a página de login
+    return redirect('index')  # Redireciona para a página de login
 #programar dps essa birosca
