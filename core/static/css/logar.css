@@ -1,7 +1,7 @@
 * {
     font-family: "Rubik", sans-serif;
     margin: 0;
-    color: white;
+    color: #000000;
 }
 
 .logo {
@@ -46,8 +46,7 @@
 }
 
 body {
-    background-color: #323272;
-
+    background-image: url(../img/wllpaperperf.jpg);
 }
 .form{
     display: flex;
@@ -56,11 +55,30 @@ body {
     align-items: center;
     text-align: start;
     justify-content: center;
+    
 }
 .form-control{
     width: 315px;
 }
 .btn{
-    color: green;
-    width: 325px;
+    color: white;
+    background-color: #2ca444;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.label-btn{
+    text-decoration: none;
+    color: #323272;
 }

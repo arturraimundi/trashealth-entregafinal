@@ -39,7 +39,7 @@
 
 }
 body{
-    background-image: url(/img/fundoqmsomos.jpg);
+    background-image: url(../img/fundoqmsomos.jpg);
     background-repeat: no-repeat;
     background-color:#527cbd
 }
@@ -48,7 +48,7 @@ body{
     height: 45vw;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/img/papel.png)
+    background-image: url(../img/papel.png)
 }
 .section1{
     display: flex;
@@ -92,7 +92,7 @@ body{
 }
 
 .section1 {
-    background-image: url(/img/fundoqmsomos.jpg);
+    background-image: url(../img/fundoqmsomos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -183,7 +183,7 @@ body{
     font-size: 3vw;
 }
 .section3 {
-    background-image: url(/img/mano.png);
+    background-image: url(../img/mano.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 10vw;
@@ -193,7 +193,7 @@ body{
 }
 
 .section4 {
-    background-image: url(/img/mano2.png);
+    background-image: url(../img/mano2.png);
     background-repeat: no-repeat;
     background-position: left;
     background-size: 10vw;

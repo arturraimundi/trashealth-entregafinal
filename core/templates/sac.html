@@ -17,8 +17,13 @@
     <a href="mapa" class="infos">MAPA</a>
     <a href="vitrine" class="infos">VITRINE</a>
     <a href="sac" class="infos">SAC</a>
-    <a href="login" class="botao">ENTRAR</a>
-    <a href="register" class="botao">Criar conta</a>
+    {% if user.is_authenticated %}
+    <!-- Se o usuário estiver autenticado, mostra o botão "Perfil" -->
+    <a href="{% url 'perfil' %}" class="botao">PERFIL</a>
+{% else %}
+    <!-- Se o usuário não estiver autenticado, mostra o botão "Logar" -->
+    <a href="{% url 'login' %}" class="botao">LOGAR</a>
+{% endif %}
 </header>
 <body>
     <section class="section1">
@@ -55,14 +60,6 @@
                     <h3 class="elemento__cartao--texto-titulo">Entre em contato</h3>
                 </div>
             </a>
-            <a class="elemento__cartao" href="#">
-                <div class="elemento__cartao--fundo"
-                    style="background-image: url(https://s2-techtudo.glbimg.com/IzMWt7qFQSYiNoZelepZBflxkFg=/0x0:1887x1258/888x0/smart/filters:strip_icc/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/c/F/wzyg56QUiBrpdzf4PNTA/foto-abertura.jpg)">
-                </div>
-                <div class="elemento__cartao--conteudo">
-                    <h3 class="elemento__cartao--texto-titulo">Recuperar</h3>
-                </div>
-            </a>
-            <div>
+        </div>
     </section>
 </body> 

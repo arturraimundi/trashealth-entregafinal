@@ -61,11 +61,18 @@ body {
     height: auto;
     max-height: 100vw;
     object-fit: cover;
-    scale: 80%;
+    scale: 90%;
+}
+.carousel-item{
+    border: 3px solid rgb(34, 32, 32);
+    border-radius: 30px;
+    background-color: rgba(128, 128, 128, 0.055);
+    margin-bottom: 40px;
 }
 .carousel-caption {
     padding: 0 7vw;
     font-size: xx-large;
+    margin-bottom: 50px;
 }
 .textoo{
     text-align: center;
@@ -83,3 +90,4 @@ body {
 .textoo-dentro{
     color: #323272;
 }
+

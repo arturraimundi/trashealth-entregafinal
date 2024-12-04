@@ -32,7 +32,7 @@ urlpatterns = [
     path('CadastrodePontos', CadastrodePontos, name='CadastrodePontos'),
     path('vitrine', vitrine, name='vitrine'),
     path('mapa', mapa, name='mapa'),
-    path('sac', sac, name='sac'),
+    path('sac', sac, namzsac'),
     path('login', login, name="login"),
     path('register', register, name="register"),
     path('perfil', perfil, name='perfil'),

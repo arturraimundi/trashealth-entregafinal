@@ -1,17 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap');
-
 * {
-    font-family: "Roboto Slab", serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
+    color: rgb(0, 0, 0);
+}
+.logo {
+    width: 50px;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #323272;
+    font-size: max(10px, 1vw)
+}
+
+.infos {
+    text-decoration: none;
     color: white;
+    transition: 200ms;
+}
+
+.infos:hover {
+    color: #f7a074;
+    transform: scale(1.1);
+    transition: 200ms;
+}
+
+.botao {
+    text-decoration: none;
+    color: white;
+    border: solid 5px #f7a074;
+    border-radius: 20px;
+    padding: 3px 20px;
+    background-color: #f7a074;
+    transition: 200ms;
+}
+
+.botao:hover {
+    color: #323272;
+    transform: scale(1.1);
+    transition: 200ms;
+
 }
 body {
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background: url('../img/fundologin.jpg') center center/cover no-repeat;
+    background: url('../img/wllpaperperf.jpg') center center/cover no-repeat;
 }
 #ground{
     background-color: #e2b4dbb8;
@@ -38,12 +76,12 @@ body {
     border-radius: 4px;
 }
 label{
-    color: white;
+    color: rgb(34, 33, 34);
 }
 .cadastro-form {
     width: 300px;
     padding: 20px;
-    border: 3px solid #e4ece446;
+    border: 3px solid #3d089246;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #010f0277;
@@ -85,13 +123,7 @@ label{
     transform: scale(1.01); 
     transition: 200ms;
 }
-a{
-    margin-top: 150px;
-    scale: 100%;
-    text-align: center;
-    color: #323272;
-    text-decoration: none;
-}
+
 a:hover{
     color: white;
     transition: 400ms;
@@ -104,4 +136,13 @@ a:hover{
 .slaoq2{
     text-align: center;
     padding-bottom: 10px;
+}
+.h1{
+    color: black;
+}
+div.container{
+    padding: 7vw 14vw 0 14vw;
+}
+.btn{
+    background-color: red;
 }

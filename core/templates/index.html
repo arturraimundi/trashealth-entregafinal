@@ -18,8 +18,13 @@
     <a href="mapa" class="infos">MAPA</a>
     <a href="vitrine" class="infos">VITRINE</a>
     <a href="sac" class="infos">SAC</a>
-    <a href="login" class="botao">ENTRAR</a>
-    <a href="register" class="botao">CRIAR CONTA</a>
+    {% if user.is_authenticated %}
+    <!-- Se o usuário estiver autenticado, mostra o botão "Perfil" -->
+    <a href="{% url 'perfil' %}" class="botao">PERFIL</a>
+{% else %}
+    <!-- Se o usuário não estiver autenticado, mostra o botão "Logar" -->
+    <a href="{% url 'login' %}" class="botao">LOGAR</a>
+{% endif %}
     
   </header>
 

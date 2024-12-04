@@ -39,8 +39,6 @@ def pontomapa(request):
         {
             'titulo': ponto.titulo,
             'local': ponto.local,
-            'coordenadaX': float(ponto.coordenadaX),
-            'coordenadaY': float(ponto.coordenadaY)
         }
         for ponto in pontos
     ]

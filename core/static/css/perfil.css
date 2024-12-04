@@ -28,7 +28,7 @@
     transition: 200ms;
 }
 
-.botao {
+button.botao {
     text-decoration: none;
     color: white;
     border: solid 5px #f7a074;
@@ -109,7 +109,7 @@ html {
 
 .txt {
     margin: 3vw;
-    font-size: 1.4vw
+    font-size: 1.4vw;
 }
 .imagem-pessoal{
     width: 27vw;
@@ -128,7 +128,9 @@ html {
     font-size: 01vw;
 }
 
-
+ul{
+    padding: 1vw;
+}
 .ponto{
     color: black;
 }
