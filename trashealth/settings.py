@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'trashealth',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'ath1214.com',
         'HOST': 'localhost',
         'PORT': '3306',
     }    

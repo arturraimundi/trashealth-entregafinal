@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/styles.css" />
-    <title>TrasHealth</title>
-    <link rel="icon" href="../static/img/logo.png" type="image/x-icon" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
-    </style>
-  </head>
-  <header class="header1">
-    <a href="index" class="infos"
-      ><img src="../static/img/logo3.png" alt="" class="logo"
-    /></a>
-    <a href="nos" class="infos">QUEM SOMOS NOS?</a>
-    <a href="mapa" class="infos">MAPA</a>
-    <a href="vitrine" class="infos">VITRINE</a>
-    <a href="sac" class="infos">SAC</a>
-    {% if user.is_authenticated %}
-    <!-- Se o usuário estiver autenticado, mostra o botão "Perfil" -->
-    <a href="{% url 'perfil' %}" class="botao">PERFIL</a>
-{% else %}
-    <!-- Se o usuário não estiver autenticado, mostra o botão "Logar" -->
-    <a href="{% url 'login' %}" class="botao">LOGAR</a>
-{% endif %}
-    
-  </header>
 
-  <body>
-    <section class="section1">
-      <div class="image-container">
-        <img src="../static/img/sol.png" alt="Imagem" class="hidden-image" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/css/styles.css" />
+  <title>TrasHealth</title>
+  <link rel="icon" href="../static/img/logo.png" type="image/x-icon" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
+  </style>
+</head>
+<header class="header1">
+  <a href="index" class="infos"><img src="../static/img/logo3.png" alt="" class="logo" /></a>
+  <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+  <a href="mapa" class="infos">MAPA</a>
+  <a href="vitrine" class="infos">VITRINE</a>
+  <a href="sac" class="infos">SAC</a>
+  {% if user.is_authenticated %}
+  <!-- Se o usuário estiver autenticado, mostra o botão "Perfil" -->
+  <a href="{% url 'perfil' %}" class="botao">PERFIL</a>
+  {% else %}
+  <!-- Se o usuário não estiver autenticado, mostra o botão "Logar" -->
+  <a href="{% url 'login' %}" class="botao">LOGAR</a>
+  {% endif %}
+
+</header>
+
+<body>
+  <section class="section1">
+    <div class="image-container">
+      <img src="../static/img/sol.png" alt="Imagem" class="hidden-image" />
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="container">
+      <div class="text">
+        <h1 class="titulo">TrasHealth</h1>
+        Software de mapeamento, informações de descarte e uma vitrine de
+        serviços relacionados a lixo eletronico
       </div>
-    </section>
-
-    <section class="section2">
-      <div class="container">
-        <div class="text">
-          <h1 class="titulo">TrasHealth</h1>
-          Software de mapeamento, informações de descarte e uma vitrine de
-          serviços relacionados a lixo eletronico
-        </div>
-        <div class="images">
-          <img src="../static/img/logo3.png" alt="" class="logo1" />
-        </div>
+      <div class="images">
+        <img src="../static/img/logo3.png" alt="" class="logo1" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section3">
-      <div class="container">
-        <div class="images">
-          <img src="../static/img/mapabranco.png" alt="" class="logo1" />
-        </div>
-        <div class="text">
-          <h1 class="titulo">Mapa</h1>
-          Utilize o nosso mapa para visualizar os pontos de descarte delixo
-          eletronico em sua regiao.
-        </div>
+  <section class="section3">
+    <div class="container">
+      <div class="images">
+        <img src="../static/img/mapabranco.png" alt="" class="logo1" />
       </div>
-    </section>
-
-    <section class="section4">
-      <div class="container">
-        <div class="text">
-          <h1 class="titulo">Vitrine</h1>
-          Uma ferramenta que possibilita empresas que trabalham com servicos
-          relacionados a lixo eletronico, possam anunciar seus servicos.
-        </div>
-        <div class="images">
-          <img src="../static/img/loja.png" alt="" class="logo1" />
-        </div>
+      <div class="text">
+        <h1 class="titulo">Mapa</h1>
+        Utilize o nosso mapa para visualizar os pontos de descarte delixo
+        eletronico em sua regiao.
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="dispositivos">
-      <h2 class="dispositivos__titulo">
-        Disponível nos seus dispositivos favoritos
+  <section class="section4">
+    <div class="container">
+      <div class="text">
+        <h1 class="titulo">Vitrine</h1>
+        Uma ferramenta que possibilita empresas que trabalham com servicos
+        relacionados a lixo eletronico, possam anunciar seus servicos.
+      </div>
+      <div class="images">
+        <img src="../static/img/loja.png" alt="" class="logo1" />
+      </div>
+    </div>
+  </section>
+
+  <section class="dispositivos">
+    <h2 class="dispositivos__titulo">
+      Disponível nos seus dispositivos favoritos
+    </h2>
+    <ul class="dispositivos__lista">
+      <li>
+        <img src="../static/img/computador.png" alt="" class="computer__img" />
+        <h3 class="secundario__imagem">Computador</h3>
+      </li>
+      <li>
+        <img src="../static/img/celular.png" alt="" class="cell__img" />
+        <h3 class="secundario__imagem">Celular</h3>
+      </li>
+    </ul>
+    <a class="" href="infos">
+      <h2 class="dispositivos__titulo1">
+      Saiba mais  
       </h2>
-      <ul class="dispositivos__lista">
-        <li>
-          <img
-            src="../static/img/computador.png"
-            alt=""
-            class="computer__img"
-          />
-          <h3 class="secundario__imagem">Computador</h3>
-        </li>
-        <li>
-          <img src="../static/img/celular.png" alt="" class="cell__img" />
-          <h3 class="secundario__imagem">Celular</h3>
-        </li>
-      </ul>
-    </section>
-  </body>
+    </a>
+  </section>
+</body>
+
 </html>

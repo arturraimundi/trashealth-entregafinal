@@ -47,6 +47,8 @@
 
 body {
     background-image: url(../img/fundomapa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -66,8 +68,9 @@ body {
 .carousel-item{
     border: 3px solid rgb(34, 32, 32);
     border-radius: 30px;
-    background-color: rgba(128, 128, 128, 0.055);
+    background-color: #9f776261;
     margin-bottom: 40px;
+
 }
 .carousel-caption {
     padding: 0 7vw;
@@ -90,4 +93,6 @@ body {
 .textoo-dentro{
     color: #323272;
 }
-
+.titulo{
+    font-size: xxx-large;
+}

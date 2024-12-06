@@ -134,3 +134,43 @@ ul{
 .ponto{
     color: black;
 }
+button {
+    text-decoration: none;
+    color: white;
+    border: solid 5px #f7a074;
+    border-radius: 20px;
+    padding: 3px 20px;
+    background-color: #f7a074;
+    transition: 200ms;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f7a074;
+    transform: scale(1.1);
+    transition: 200ms;
+}
+.user  {
+    width: 40vw;
+    height: 40vw;
+}
+button.btn {
+    text-decoration: none;
+    color: white;
+    border: solid 5px #f7a074;
+    border-radius: 20px;
+    padding: 3px 20px;
+    background-color: #f7a074;
+    transition: 200ms;
+}
+
+.btn:hover {
+    color: #323272;
+    transform: scale(1.1);
+    transition: 200ms;
+
+}
+.titulo-nome{
+    padding: 2vw 0 ;
+}

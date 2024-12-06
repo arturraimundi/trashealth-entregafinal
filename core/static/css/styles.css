@@ -165,3 +165,27 @@ body {
     background-position: left;
     background-size: 10vw;
 }
+.dispositivos__titulo1{
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #f7a074;  
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    background-color: #f7a074;;
+    color: #323272;
+    transition: 200ms;
+}
+.dispositivos__titulo1:hover {
+    color: #323272;
+    transform: scale(1.1);
+    transition: 200ms;
+
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}

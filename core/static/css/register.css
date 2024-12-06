@@ -146,3 +146,6 @@ div.container{
 .btn{
     background-color: red;
 }
+input.form-control{
+    color: red;
+}

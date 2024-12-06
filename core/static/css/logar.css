@@ -82,3 +82,6 @@ body {
     text-decoration: none;
     color: #323272;
 }
+.alert.alert-error{
+    color: red;
+}

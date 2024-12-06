@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vitrine de Pontos de Coleta</title>
     <link rel="stylesheet" href="../static/css/vitrine.css" />
+    <link rel="icon" href="../static/img/logo.png" type="image/x-icon">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
     </style>
@@ -43,7 +44,7 @@
               alt="Imagem de {{ i.titulo }}"
             />
             <div class="carousel-caption d-none d-md-block">
-              <h5>{{ i.titulo }}</h5>
+              <h5 class="titulo">{{ i.titulo }}</h5>
               <p><strong>Local:</strong> {{ i.local }}</p>
               <p><strong>Descrição:</strong> {{ i.descricao }}</p>
             </div>

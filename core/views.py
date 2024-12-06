@@ -1,31 +1,28 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .forms import PontodeColetaForm
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login as auth_login
-from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth.decorators import login_required
+from .forms import PontodeColetaForm
 from .models import PontodeColeta
 from django.http import HttpResponse
 import json
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_object_or_404
-from django.contrib.auth import logout
+from validate_docbr import CNPJ  # Certifique-se de que este pacote está instalado
 
 def index(request):
-        return render(request, 'index.html')
+    return render(request, 'index.html')
 
 def mapa(request):
-       return render(request, 'mapa.html')
+    return render(request, 'mapa.html')
 
 def sac(request):
-       return render(request, 'sac.html')
+    return render(request, 'sac.html')
 
 def nos(request):
-       return render(request, 'nos.html')
+    return render(request, 'nos.html')
 
-
-  
-
+def infos(request):
+    return render(request, 'infos.html')
 
 def vitrine(request):
     context = {
@@ -47,18 +44,11 @@ def pontomapa(request):
     }
     return render(request, 'mapa.html', context)
 
-
-
 def erro(request):
-     return render(request, 'erro.html')
+    return render(request, 'erro.html')
 
-def  erroCADASTRODEPONTO(request):
-     return render(request, ' erroCADASTRODEPONTO.html')
-
-
-from django.shortcuts import render
-from django.contrib.auth.models import User
-from validate_docbr import CNPJ  # Instale com pip install validate-docbr
+def erroCADASTRODEPONTO(request):
+    return render(request, 'erroCADASTRODEPONTO.html')
 
 def register(request):
     if request.method == "GET":
@@ -72,20 +62,20 @@ def register(request):
         # Validação de CNPJ
         cnpj_validator = CNPJ()
         if not cnpj_validator.validate(username):
-            return render(request, 'register.html', {'error': 'CNPJ inválido'})
+            messages.error(request, 'CNPJ inválido')
+            return render(request, 'register.html')
 
         # Verificar se o username ou email já existe
-        user = User.objects.filter(username=username).first() or User.objects.filter(email=email).first()
-        if user:
-            return render(request, 'register.html', {'error': 'Usuário ou e-mail já cadastrado'})
+        if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
+            messages.error(request, 'Usuário ou e-mail já cadastrado')
+            return render(request, 'register.html')
 
         # Criar usuário
         user = User.objects.create_user(username=username, first_name=first_name, email=email, password=senha)
         user.save()
 
-        return render(request, 'login.html')
-
-     
+        messages.success(request, 'Usuário registrado com sucesso')
+        return redirect('login')
 
 def login(request):
     if request.method == "GET":
@@ -101,10 +91,8 @@ def login(request):
             auth_login(request, user)  # Registra o login na sessão
             return redirect('perfil')  # Redireciona para a view de perfil
         else:
-            return messages.succes('Email ou senha inválidos')
-         
-
-
+            messages.error(request, 'Email ou senha inválidos')  # Passando o request como argumento
+            return render(request, 'login.html')
 
 @login_required
 def CadastrodePontos(request):
@@ -117,15 +105,14 @@ def CadastrodePontos(request):
 
             # Verificando se os CNPJs coincidem
             if ponto_cnpj != user_cnpj:
-                # Retorna uma página de erro (você pode personalizar o template de erro)
-                return render(request,'erroCADASTRODEPONTO.html')
+                return render(request, 'erroCADASTRODEPONTO.html')
 
             # Salvando o ponto de coleta
             form.save()
             form = PontodeColetaForm()
             messages.success(request, 'Ponto de coleta cadastrado com sucesso.')
         else:
-            return render(request,'erroCADASTRODEPONTO.html')
+            return render(request, 'erroCADASTRODEPONTO.html')
     else:
         form = PontodeColetaForm()
     
@@ -133,9 +120,6 @@ def CadastrodePontos(request):
         'form': form
     }
     return render(request, 'cadastropontos.html', context)
-
-    
-
 
 @login_required
 def excluir_ponto(request, ponto_id):
@@ -147,7 +131,6 @@ def excluir_ponto(request, ponto_id):
     
     # Redirecionar de volta para o perfil
     return redirect('perfil')
-
 
 @login_required
 def perfil(request):
@@ -163,13 +146,9 @@ def perfil(request):
         {
             'username': username,
             'first_name': first_name,
-            'pontos': pontos,  # Passando os objetos completos
+            'pontos': pontos,
         }
     )
-
-
-
-
 
 def sair(request):
     logout(request)  # Remove o usuário da sessão

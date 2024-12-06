@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrasHealth</title>
-    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="icon" href="../static/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="../static/css/mapa.css">
   <style>
@@ -43,6 +43,12 @@
         .bindPopup("<b>Ponto</b><br>Vista alegre").openPopup();
       var romeMarker = L.marker([-26.867, -52.4266]).addTo(map)
         .bindPopup("<b>Ponto</b><br>Sésamo").openPopup();
+      var romeMarker = L.marker([-26.88211561979047, -52.422127073439654]).addTo(map)
+        .bindPopup("<b>CEMEI</b><br>Pimpolho").openPopup();
+      var romeMarker = L.marker([-26.866810558219985, -52.390694419239445]).addTo(map)
+        .bindPopup("<b>EMEI</b><br>São Jorge").openPopup();
+      var romeMarker = L.marker([-26.874619079902867, -52.41210554195389]).addTo(map)
+        .bindPopup("<b>Ambiental</b><br>Limpeza Urbana").openPopup();
       // Adiciona uma marcação em Roma com uma janela pop-up
       var romeMarker1 = L.marker([-26.876682, -52.418393]).addTo(map)
         .bindPopup("<b>Ponto</b><br>IFSC").openPopup();

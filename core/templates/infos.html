@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/infos.css" />
+    <title>TrasHealth</title>
+    <link rel="icon" href="../static/img/logo.png" type="image/x-icon" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@1,900&display=swap");
+    </style>
+</head>
+<header class="header1">
+    <a href="index" class="infos"><img src="../static/img/logo3.png" alt="" class="logo" /></a>
+    <a href="nos" class="infos">QUEM SOMOS NOS?</a>
+    <a href="mapa" class="infos">MAPA</a>
+    <a href="vitrine" class="infos">VITRINE</a>
+    <a href="sac" class="infos">SAC</a>
+    {% if user.is_authenticated %}
+    <!-- Se o usuário estiver autenticado, mostra o botão "Perfil" -->
+    <a href="{% url 'perfil' %}" class="botao">PERFIL</a>
+    {% else %}
+    <!-- Se o usuário não estiver autenticado, mostra o botão "Logar" -->
+    <a href="{% url 'login' %}" class="botao">LOGAR</a>
+    {% endif %}
+
+</header>
+
+<body>
+    <section class="section1">
+        <div class="image-container">
+            <img src="../static/img/sol.png" alt="Imagem" class="hidden-image" />
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <div class="text">
+                <h1 class="titulo">Importância do Descarte Adequado</h1>
+                Descarte correto de lixo é essencial para a preservação do meio ambiente. Ao separar os resíduos,
+                evitamos que materiais recicláveis se misturem com os orgânicos e não recicláveis. Além disso, a
+                destinação inadequada pode contaminar solo, água e ar, afetando a saúde pública. A reciclagem e o
+                tratamento adequado dos resíduos são atitudes simples que fazem toda a diferença para um planeta mais
+                limpo e sustentável. Vamos todos fazer nossa parte!
+            </div>
+        </div>
+    </section>
+
+    <section class="section3">
+        <div class="container">
+            <div class="text">
+                <h1 class="titulo">Reciclar</h1>
+                Reciclar é muito mais do que separar papel, plástico, vidro e metal. Ao reciclar, você contribui para a
+                redução de resíduos nos aterros, economiza recursos naturais e diminui a emissão de gases poluentes. O
+                vidro, por exemplo, pode ser reciclado infinitamente sem perder qualidade. Já o plástico, ao ser
+                reutilizado, evita que milhões de toneladas de resíduos poluam oceanos e praias. Se cada um fizer sua
+                parte, podemos criar um futuro mais verde e saudável para as próximas gerações.
+            </div>
+        </div>
+    </section>
+
+    <section class="section4">
+        <div class="container">
+            <div class="text">
+                <h1 class="titulo">Como Separar o Lixo </h1>
+                Separar o lixo em casa é um gesto simples, mas que traz grandes benefícios. Organize seus resíduos em
+                três categorias: recicláveis (papel, vidro, metal e plástico), orgânicos (restos de comida e podas) e
+                não recicláveis (como certos tipos de plástico e esponjas). Além disso, lembre-se de lavar garrafas e
+                latas antes de descartá-las. Dessa forma, você facilita o processo de reciclagem e contribui para um
+                ambiente mais limpo e sustentável.
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <div class="text">
+                <h1 class="titulo"> Benefícios da Reciclagem de Lixo Eletrônico</h1>
+                A reciclagem de lixo eletrônico traz diversos benefícios, como a diminuição da poluição ambiental e a
+                redução do desperdício de recursos naturais. A extração de materiais como ouro, prata e cobre dos
+                aparelhos descartados também diminui a necessidade de mineração, o que ajuda a preservar ecossistemas.
+                Além disso, a reciclagem de eletrônicos pode gerar novos empregos e fomentar a economia circular, em que
+                os materiais são reutilizados para criar novos produtos.
+            </div>
+        </div>
+    </section>
+
+    <section class="section3">
+        <div class="container">
+            <div class="text">
+                <h1 class="titulo">O Que Acontece com o Lixo Eletrônico Quando Não é Reciclado?</h1>
+                Reciclar é muito mais do que separar papel, plástico, vidro e metal. Ao reciclar, você contribui para a
+                redução de resíduos nos aterros, economiza recursos naturais e diminui a emissão de gases poluentes. O
+                vidro, por exemplo, pode ser reciclado infinitamente sem perder qualidade. Já o plástico, ao ser
+                reutilizado, evita que milhões de toneladas de resíduos poluam oceanos e praias. Se cada um fizer sua
+                parte, podemos criar um futuro mais verde e saudável para as próximas gerações.
+            </div>
+        </div>
+    </section>
+
+    <section class="section4">
+        <div class="container">
+            <div class="text">
+                <h1 class="titulo"> Cuidados ao Descartar Equipamentos Eletrônicos</h1>
+                Quando o lixo eletrônico não é descartado corretamente, ele pode acabar em lixões ou aterros,
+                contaminando o solo e a água. Além disso, muitos desses aparelhos contêm materiais valiosos que, se
+                reciclados, poderiam ser reutilizados para fabricar novos produtos. A reciclagem de eletrônicos também
+                ajuda a diminuir a demanda por minérios, contribuindo para a preservação dos recursos naturais. Por
+                isso, sempre que possível, escolha reciclar ou repassar seus eletrônicos antigos.
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

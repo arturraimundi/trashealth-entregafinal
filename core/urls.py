@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from core.views import index, CadastrodePontos, vitrine, mapa, sac, login, perfil, register, nos, erro, erroCADASTRODEPONTO, sair
+from core.views import index, CadastrodePontos, vitrine, mapa, sac, login, perfil, register, nos, infos, erro, erroCADASTRODEPONTO, sair
 from django.contrib.auth.views import LogoutView
 from django.conf.urls.static import static
 from django.conf import settings
@@ -32,11 +32,12 @@ urlpatterns = [
     path('CadastrodePontos', CadastrodePontos, name='CadastrodePontos'),
     path('vitrine', vitrine, name='vitrine'),
     path('mapa', mapa, name='mapa'),
-    path('sac', sac, namzsac'),
+    path('sac', sac, name='sac'),
     path('login', login, name="login"),
     path('register', register, name="register"),
     path('perfil', perfil, name='perfil'),
     path('nos', nos, name='nos'),
+    path('infos', infos, name='infos'),
     path('cadastrodepontoerro', erroCADASTRODEPONTO),
     path('excluir_ponto/<int:ponto_id>/', views.excluir_ponto, name='excluir_ponto'),
     path('logout/', views.sair, name='logout'),
